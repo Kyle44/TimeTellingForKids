@@ -1,0 +1,115 @@
+<!-- Name: Kyle Fritz
+	 File: proj1.html
+	 Date Created: 3/8/17
+	 Description: Time telling game for children using Javascript, with capability for teacher to view the grades of the students.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="proj1.css">
+</head>
+
+<body> <!-- Body is separated into divs with page IDs, for displaying and removing pages easily -->
+
+	<div id="studentInputPage">
+		<button id="viewTableButton" onclick="typePassword()">View Table</button><br>
+		First and last name: <input id="name" type="text"><br><br>
+		<input id="submitNameButton" type="submit" value="Submit" onclick="submitName()"><br><br> <!-- submit button -->
+	</div>
+
+	<div id="clockPage">
+		<p id="currentLevel">Level 1</p>
+		<p id="playerCurrentScore">Score<br>0</p>
+		<p id="timeRemaining">90 Seconds Left!</p>
+		<p id="rightOrWrong">What time is it?</p>
+
+		<div id="highScores">
+			<b>High Scores</b><br>
+			<table id="highScoresTable" style="width:100%">
+			<tr>
+				<th>Name</th>
+				<th>Score</th>
+			</tr>
+			<tr>
+				<th>Harry Potter</th>
+				<th>50000</th>
+			</tr>
+			<tr>
+				<th>Michael Jordan</th>
+				<th>10000</th>
+			</tr>
+			<tr>
+				<th>Santa Claus</th>
+				<th>5000</th>
+			</tr>
+
+		</table>
+		</div>
+
+		<div id="timeTest">
+			What's the Hour?<br>
+			<select id="hourSelect">
+			  <option value="1">1</option>
+			  <option value="2">2</option>
+			  <option value="3">3</option>
+			  <option value="4">4</option>
+			  <option value="5">5</option>
+			  <option value="6">6</option>
+			  <option value="7">7</option>
+			  <option value="8">8</option>
+			  <option value="9">9</option>
+			  <option value="10">10</option>
+			  <option value="11">11</option>
+			  <option value="12">12</option>
+			</select><br>
+			What's the Minute?<br>
+			<select id="minuteSelect">
+				<option value="00">00</option>
+				<option value="05">05</option>
+				<option value="10">10</option>
+				<option value="15">15</option>
+				<option value="20">20</option>
+				<option value="25">25</option>
+				<option value="30">30</option>
+				<option value="35">35</option>
+				<option value="40">40</option>
+				<option value="45">45</option>
+				<option value="50">50</option>
+				<option value="55">55</option>
+				<option value="60">60</option>
+			</select><br><br>
+			<button id="testUserTimeButton" onclick="testUserTime()">Try your time!</button><br>
+		</div>
+
+		<canvas id="canvas" width="400" height="400"/>
+	</div>
+
+	<div id="passwordPage">
+		<input id="password" type="password"><br>
+		<input id="submitPasswordButton" type="submit" value="Submit Password" onclick="reviewPassword()"> <!-- submit button -->
+	</div>
+
+	<div id="wrongPasswordPage">
+		Wrong Password!<br>
+		<button onclick="returnToStart()">Back to the game!</button>
+	</div>
+
+	<div id="studentTablePage">
+		<table id="studentTable" style="width:100%">
+			<tr>
+				<th>Student Name</th>
+				<th>Performance</th>
+			</tr>
+		</table>
+
+		<br><br>
+		<button onclick="returnToStart()">Return to homescreen</button>
+	</div>
+
+	<script src="drawClock.js" type="text/javascript"></script> <!-- Construction of the clock -->
+	<script src="proj1.js" type="text/javascript"></script> 
+	<script src="level.js" type="text/javascript"></script> 
+
+</body>
+</html>

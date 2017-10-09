@@ -1,0 +1,89 @@
+/* 	Name: Kyle Fritz
+	File: proj1.css
+	Date Created: 3/8/17
+	Description: CSS Styling for proj1.html
+*/
+
+body, canvas{
+	background-color: lightblue;
+}
+
+div{
+	display: none; /* On default, don't display the divs */
+	text-align: center;
+	vertical-align: center;
+	border-width: 1px;
+	border-color: green;
+	border-style: solid;
+}
+
+#currentLevel{
+	font-size: 1.3em;
+}
+
+#studentInputPage{
+	display: block; /* Show this page at start of session */
+	background-color: red;
+	color: white; /* Font color */
+}
+
+table, td, tr, th{
+	border: 1px solid black;
+	text-align: center;
+}
+
+#timeTest{
+	display: block;
+	position: fixed;
+	bottom: 30px;
+	left: 30px;
+	right: 30px;
+}
+
+#viewTableButton{
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+}
+
+#highScores{
+	display: block;
+	position: fixed;
+	right: 20px;
+	width: 400px;
+	background-color: #CE93D8;
+}
+
+#studentTable{
+	background-color: #CE93D8;	
+}
+
+tr:nth-child(n + 2){
+	text-align: center;
+	font-style: bold;
+	color: darkblue;
+}
+
+#playerCurrentScore{
+	left: 200px;
+	position: absolute;
+	font-size: 4em;
+	color: blue;
+	text-align: center;
+}
+
+#timeRemaining{
+	left: 200px;
+	top: 280px;
+	position: absolute;
+	text-align: center;
+	font-size: 1.35em;
+}
+
+#rightOrWrong{
+	left: 200px;
+	top: 380px;
+	position: absolute;
+	text-align: center;
+	font-size: 1.5em;
+}
